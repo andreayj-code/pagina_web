@@ -24,7 +24,7 @@
     if (cantidad === '') { 
       alert("ingrese un numero");
     } else if (cantidad > stock ) { 
-     alert("producto agotado");
+     alert("producto agotados");
     
     }else{
       json_carrito = {
