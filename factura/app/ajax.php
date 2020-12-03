@@ -31,7 +31,7 @@ switch ($action) {
         json_output(json_build(400,'producto no valido'));
         }  
 
-        $id = (int) $_POST['id'];
+        $id = (int) $_POST['id']; 
           
           // si no hay producto
          if (!isset($_SESSION['conceptos']) || empty($_SESSION['conceptos'])) {
