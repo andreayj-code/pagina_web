@@ -21,7 +21,7 @@
   
 
 
-    if (cantidad == '') {
+    if (cantidad === '') {
       alert("ingrese un numero");
     } else if (cantidad > stock ) { 
      alert("producto agotado");
