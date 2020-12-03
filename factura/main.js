@@ -56,7 +56,7 @@ $('#agregar_concepto').on('submit',function(e) {
         },
         beforeSend: function() { 
 
-        } 
+        }  
         
       })
       .done(function(res) { 
