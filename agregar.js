@@ -52,15 +52,7 @@
     } 
  
    
-    
-   
-   
   
-  
-  
-   
-  
-
   }
    
   
@@ -73,10 +65,11 @@ function cargarTabla() {
  var acc = document.getElementById('acc');
  var suma = 0;  
  var cont = 0;
-
+ 
+ 
  for (var i = 0; i < items.length; i++) {
    var elemento = document.createElement('tr'); 
-  
+   
    elemento.innerHTML += ("<td>"+items[i].id+"</td>");
    elemento.innerHTML += ("<td>"+items[i].nombre+"</td>");
    elemento.innerHTML += ("<td>"+items[i].precio+"</td>");

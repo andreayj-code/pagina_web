@@ -213,36 +213,39 @@
 		var item_id = $("#id_" + num_item).val();
 		var item_nombre = $("#nombre__" + num_item).val();
 		var precio = $("#precio_" + num_item).val();
-		var stock = $("#stock_" + num_item).val();
+		var stock = parseInt($("#stock_" + num_item).val());
 		var cantidad = $("#cantidad_" + num_item).val();
 			
 		var subtotal = parseFloat(precio) * parseFloat(cantidad);
  
     
-    
-    if (cantidad > stock ) {
-      
-      alertify.confirm("producto agotado"); 
+    if (cantidad === '') { 
+      alert("ingrese un numero");
+    } else if (cantidad > stock ) { 
+     alert("producto agotado");
     
     }else{
-      json_item = {
-			"id" : item_id,
-			"nombre" : item_nombre,
-			"precio" : precio,
-			"stock" : stock,
-			"cantidad" : cantidad,
-			"subtotal" : subtotal
-		}
-    items.push(json_item);
+      json_carrito = {
+        "id" : item_id,
+        "nombre" : item_nombre,
+        "precio" : precio,
+        "stock" : stock,
+        "cantidad" : cantidad,
+        "subtotal" : subtotal
+       
+     }  
+     items.push(json_carrito);
+
+     console.log(items);  
+     
     
-    console.log(items); 
-    
-    cargarTabla();  
-    
-    }
-    
+     cargarTabla();  
+
+
+    } 
+ 
 		
-  }  
+  }   
 
 	/* ..:: MÉTODO CARGAR TABLA ::..*/
 	function cargarTabla(){

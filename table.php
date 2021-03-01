@@ -11,7 +11,7 @@
 
             
         $total = 0; 
-        $i = 0;
+        $i = 0;  
  
 
         foreach ($carrito as $p ) {

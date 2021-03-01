@@ -47,45 +47,32 @@
 </head>
 
 
-<body>
+<body style="padding-left:30px; padding-right:30px;">
  
-
-
-
-
-
-
   <h1> listado de productos</h1>
-
   <div>
     <a href="factura/cotizar.php"><button class="btn btn-primary">COTIZACION</button></a>
     <a href="reporte.php"><button class="btn btn-primary">INFORME VENTA</button></a>
     <a href="pdf1.php"><button class="btn btn-primary">DETALLE VENTA</button></a>
   </div>
-
-  <div>
-
-    <br>
-    <label> precio libra</label> <input type="text" name="libra" id="libra" required> </br>
-    <br>
-    <label>gramos</label> <input type="text" name="gramos" id="gramos" required> </br>
-
-
-
-    <input type="submit" name="calcular" value="calcular" id="enviar">
+ 
+  <div class="card"> 
+    <div class="card-body"> 
+      <table>
+    <label>precio libra</label> <input  class="form-control" style="width: 10%;" type="text" name="libra" id="libra" required> </br>
+    <label>gramos</label> <br> <input class="form-control" style="width: 10%;" type="text" name="gramos" id="gramos" required> </br>
+    <input type="submit" class="btn btn-success" name="calcular" value="calcular" id="enviar" >
 
     <div id="resultado"></div>
-
-
-
+      
+ 
+    </div>
   </div>
 
-
+ 
+  
 
 </body>
-
-
-
 
 <table border="1" class="table table-striped" id="mitabla"></br>
 
@@ -119,10 +106,10 @@
   $cont = 0;
   foreach ($productos as $p) {
     echo "<tr>";
-    echo "<td>.$p->id.</td>";
-    echo "<td>.$p->nombre.</td>";
-    echo "<td>.$p->precio.</td>";
-    echo "<td>.$p->stock.</td>";
+    echo "<td>$p->id</td>";
+    echo "<td>$p->nombre</td>";
+    echo "<td>$p->precio</td>";
+    echo "<td>$p->stock</td>";
 
 
     echo "<td>";
@@ -140,11 +127,12 @@
 
     echo "</td>";
     echo "</tr>";
+    $cont++;
   }
-  $cont++;
+   
+    
 
   ?>
-
 
 
 
@@ -186,7 +174,18 @@ if (isset($_GET["m"])) {
 
     <tbody id="cuerpoTabla">
 
-    </tbody>
+    </tbody> 
+     <tr id="total"> 
+        <td>$total</td>
+     </tr> 
+
+     <tr id="acc"> 
+        <td></td>
+     </tr>
+
+
+
+
 
   </table>
 

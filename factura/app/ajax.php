@@ -87,10 +87,10 @@ switch ($action) {
                                       </td>
                                     </tr> 
                                       '; 
-                                        (float)$subtotal += $v['subtotal']; 
+                                        (float)$subtotal += $v['subtotal'];  
                                        
                                     };
-                        
+                         
                                     $iva = (float) $subtotal * 0.19;
                                     $total = $subtotal + $iva;
 
